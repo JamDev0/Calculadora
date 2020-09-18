@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Aula12Ex3</title>
+		<link rel="stylesheet" href="css.css">
+		<?php
+			$Igual = "False";
+		?>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="calculadoradiv">
+			<img id="Imag" usemap="#Calculadora" width="100%" height="auto" src="Calculadora2.png">
+			<map name="Calculadora" id="Mapa">
+			</map>
+		</div>
+
+		<div id="Mostrador">
+		</div>
+			<script type="text/javascript">
+				var largura = document.getElementById('Imag').width;
+				var altura = document.getElementById('Imag').height;
+				var coord1 = "" + largura*0.3098 + "," + altura*0.3040 + "," + largura*0.4738 + "," + altura*0.4390 + "";
+				var coord2 = "" + largura*0.5224 + "," + altura*0.3046 + "," + largura*0.6827 + "," + altura*0.4397 + "";
+				var coord3 = "" + largura*0.2035 + "," + altura*0.7886 + "," + largura*0.3634 + "," + altura*0.9224 + "";
+				var coord4 = "" + largura*0.1047 + "," + altura*0.4690 + "," + largura*0.2650 + "," + altura*0.6012 + "";
+				var coord5 = "" + largura*0.3098 + "," + altura*0.4678 + "," + largura*0.4701 + "," + altura*0.5999 + "";
+				var coord6 = "" + largura*0.5224 + "," + altura*0.4678 + "," + largura*0.6827 + "," + altura*0.5999 + "";
+				var coord7 = "" + largura*0.8953 + "," + altura*0.2389 + "," + largura*0.9888 + "," + altura*0.3155 + "";
+				var coord8 = "" + largura*0.1047 + "," + altura*0.6309 + "," + largura*0.2650 + "," + altura*0.7631 + "";
+				var coord9 = "" + largura*0.3098 + "," + altura*0.6322 + "," + largura*0.4701 + "," + altura*0.7644 + "";
+				var coord10 = "" + largura*0.5224 + "," + altura*0.6309 + "," + largura*0.6827 + "," + altura*0.7631 + "";
+				var coord11 = "" + largura*0.7276 + "," + altura*0.6328 + "," + largura*0.8879 + "," + altura*0.7650 + "";
+				var coord12 = "" + largura*0.4236 + "," + altura*0.7902 + "," + largura*0.5860 + "," + altura*0.9224 + "";
+				var coord13 = "" + largura*0.7284 + "," + altura*0.4671 + "," + largura*0.8891 + "," + altura*0.6012 + "";
+				var coord14 = "" + largura*0.7276 + "," + altura*0.7931 + "," + largura*0.8879 + "," + altura*0.9253 + "";
+				var coord15 = "" + largura*0.1059 + "," + altura*0.3052 + "," + largura*0.2670 + "," + altura*0.4390 + "";
+				var coord16 = "" + largura*0.7259 + "," + altura*0.3043 + "," + largura*0.8883 + "," + altura*0.4390 + "";
+
+				var con = 0;
+				while(con < 16)
+				{
+					var con = con+1;
+
+					var teste = "coord=" + "coord" + con;
+					eval(teste);
+
+					var teste2 = "função=" + "'função" + con +"()'";
+					eval(teste2);
+
+					var Area = document.createElement("area");
+
+					var Forma = document.createAttribute("shape");
+					Forma.value = "rect";
+
+					var Cord = document.createAttribute("coords");
+					Cord.value = coord;
+
+					var Classe = document.createAttribute("class");
+					Classe.value = "mapa";
+
+					var clique = document.createAttribute("onclick");
+					clique.value = função;
+
+					Area.setAttributeNode(Forma);
+					Area.setAttributeNode(Cord);
+					Area.setAttributeNode(Classe);
+					Area.setAttributeNode(clique);
+
+					document.getElementById("Mapa").appendChild(Area);
+				}
+
+				function função1() 
+				{
+					var Oito = document.createTextNode("8");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função2() 
+				{
+					var Oito = document.createTextNode("9");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função3() 
+				{
+					var Oito = document.createTextNode("0");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função4() 
+				{
+					var Oito = document.createTextNode("4");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função5() 
+				{
+					var Oito = document.createTextNode("5");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função6() 
+				{
+					var Oito = document.createTextNode("6");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função7() 
+				{
+					window.location.href = "Site.php"
+				}
+
+				function função8() 
+				{
+					var Oito = document.createTextNode("1");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função9() 
+				{
+					var Oito = document.createTextNode("2");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função10() 
+				{
+					var Oito = document.createTextNode("3");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função11() 
+				{
+					separador = document.createTextNode(";");
+					var p2 = document.createElement("p");
+					p2.appendChild(separador);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo2 = document.createAttribute("style");
+					estilo2.value = "display: none;";
+					p2.setAttributeNode(identificação2);
+					p2.setAttributeNode(estilo2);
+
+					separador2 = document.createTextNode(";");
+					var p3 = document.createElement("p");
+					p3.appendChild(separador2);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo = document.createAttribute("style");
+					estilo.value = "display: none;";
+					p3.setAttributeNode(identificação2);
+					p3.setAttributeNode(estilo);
+
+					var Oito = document.createTextNode("^");
+					var p = document.createElement("p");
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+
+
+					p.appendChild(p2);
+					p.appendChild(Oito);
+					p.appendChild(p3);
+
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função12() 
+				{
+					var Oito = document.createTextNode(".");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função13() 
+				{
+                    separador2 = document.createTextNode(";");
+					var p2 = document.createElement("p");
+					p2.appendChild(separador2);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo = document.createAttribute("style");
+					estilo.value = "display: none;";
+					p2.setAttributeNode(identificação2);
+					p2.setAttributeNode(estilo);
+
+					separador2 = document.createTextNode(";");
+					var p3 = document.createElement("p");
+					p3.appendChild(separador2);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo = document.createAttribute("style");
+					estilo.value = "display: none;";
+					p3.setAttributeNode(identificação2);
+					p3.setAttributeNode(estilo);
+
+					var Oito = document.createTextNode("!");
+					var p = document.createElement("p");
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+
+                    p.appendChild(p2);
+					p.appendChild(Oito);
+					p.appendChild(p3);
+
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função14() 
+				{
+					var ops = $("#Mostrador").text();
+					console.log(ops);
+					var resultado =  ops.split(";");
+					console.log(resultado);
+					var primeiro = parseFloat(resultado[0]);
+					var segundo = resultado[1];
+					var terceiro = parseFloat(resultado[2]);
+					var quarto = resultado[3];
+					var quinto = parseFloat(resultado[4]);
+					var tamanho = resultado.length;
+					console.log(tamanho);
+
+					var elemento = document.getElementById("Mostrador");
+					while (elemento.firstChild) {
+					elemento.removeChild(elemento.firstChild);
+					}
+
+					if(tamanho == 3)
+					{
+                        console.log(segundo);
+							switch (segundo) 
+							{
+                                case "√" :
+                                    resulta = Math.pow(terceiro, 1/primeiro);
+                                    console.log(resulta);
+                                    break;
+
+                                case "^":
+                                    resulta = Math.pow(primeiro, terceiro);
+                                    console.log(resulta);
+                                    break;
+
+                                case "!" :
+                                    var contador = 0;
+									var contador2 = terceiro;
+									while (contador2 -1 > contador)
+									{
+										contador = contador + 1;
+										terceiro = terceiro * contador;
+									}
+									console.log(terceiro);
+									resulta = terceiro;
+                                    break;
+
+                                default:
+                                    resulta = "erro";
+                                    console.log(resulta);
+                                    break;
+                            }
+						var ReM = document.createElement("p");
+						var Remm = document.createTextNode(resulta);
+						ReM.appendChild(Remm);
+					}
+					$(".Numeros").hide();
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					ReM.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(ReM);
+				}
+
+				function função15() 
+				{
+					var Oito = document.createTextNode("7");
+					var p = document.createElement("p");
+					p.appendChild(Oito);
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				function função16() 
+				{
+					separador = document.createTextNode(";");
+					var p2 = document.createElement("p");
+					p2.appendChild(separador);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo2 = document.createAttribute("style");
+					estilo2.value = "display: none;";
+					p2.setAttributeNode(identificação2);
+					p2.setAttributeNode(estilo2);
+
+					separador2 = document.createTextNode(";");
+					var p3 = document.createElement("p");
+					p3.appendChild(separador2);
+					var identificação2 = document.createAttribute("id");
+					identificação2.value= "separador";
+					var estilo = document.createAttribute("style");
+					estilo.value = "display: none;";
+					p3.setAttributeNode(identificação2);
+					p3.setAttributeNode(estilo);
+
+					var Oito = document.createTextNode("√");
+					var p = document.createElement("p");
+					var identificação = document.createAttribute("class");
+					identificação.value= "Numeros";
+					p.setAttributeNode(identificação);
+
+					p.appendChild(p2);
+					p.appendChild(Oito);
+					p.appendChild(p3);
+
+					document.getElementById("Mostrador").appendChild(p);
+				}
+
+				var telal = (window.innerWidth);
+				var fontet = telal*0.275;
+
+				var altura = fontet*0.218;
+
+				var fontea = document.createAttribute("style");
+				fontea.value = "font-size:" + fontet + "px; top:" + altura + "px;";
+
+				document.getElementById("Mostrador").setAttributeNode(fontea);
+			</script>
+	</body>
+</html>
